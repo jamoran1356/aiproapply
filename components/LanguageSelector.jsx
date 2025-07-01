@@ -17,7 +17,7 @@ export function LanguageSelector() {
           <span className="hidden sm:inline">{languages[language].flag}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-48 bg-white dark:bg-slate-800 p-2 rounded-lg shadow-lg cursor-pointer">
+      <DropdownMenuContent align="end">
         {Object.entries(languages).map(([code, lang]) => (
           <DropdownMenuItem
             key={code}

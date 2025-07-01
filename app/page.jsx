@@ -132,10 +132,13 @@ export default function HomePage() {
             </nav>
             <div className="flex items-center space-x-4">
               <LanguageSelector />
-              <Button variant="ghost" className="text-slate-600">
+              <Button variant="ghost" className="text-slate-600" onClick={() => (window.location.href = "/login")}>
                 {t("header.login")}
               </Button>
-              <Button className="text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+              <Button
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                onClick={() => (window.location.href = "/login")}
+              >
                 {t("header.signUp")}
               </Button>
             </div>

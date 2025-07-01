@@ -1,0 +1,60 @@
+module.exports = {
+  apps: [
+    {
+      name: "aiproapply-web",
+      script: "npm",
+      args: "start",
+      cwd: "./",
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: "1G",
+      env: {
+        NODE_ENV: "production",
+        PORT: 3000,
+      },
+    },
+    {
+      name: "aiproapply-agent",
+      script: "node",
+      args: "agent/index.js",
+      cwd: "./",
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: "512M",
+      env: {
+        NODE_ENV: "production",
+        AGENT_PORT: 3001,
+      },
+    },
+    {
+      name: "aiproapply-api",
+      script: "node",
+      args: "api/index.js",
+      cwd: "./",
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: "512M",
+      env: {
+        NODE_ENV: "production",
+        API_PORT: 3002,
+      },
+    },
+    {
+      name: "aiproapply-notifications",
+      script: "node",
+      args: "notification/index.js",
+      cwd: "./",
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: "256M",
+      env: {
+        NODE_ENV: "production",
+        NOTIFICATION_PORT: 3003,
+      },
+    },
+  ],
+}

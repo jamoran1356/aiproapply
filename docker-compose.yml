@@ -1,0 +1,104 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15
+    container_name: aiproapply-postgres
+    environment:
+      POSTGRES_USER: aiproapply
+      POSTGRES_PASSWORD: aiproapply123
+      POSTGRES_DB: aiproapply
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    networks:
+      - aiproapply-network
+
+  # Redis for caching and sessions
+  redis:
+    image: redis:7-alpine
+    container_name: aiproapply-redis
+    ports:
+      - "6379:6379"
+    networks:
+      - aiproapply-network
+
+  # Main Next.js Application
+  web:
+    build: .
+    container_name: aiproapply-web
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=postgresql://aiproapply:aiproapply123@postgres:5432/aiproapply
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - aiproapply-network
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+  # Agent Service
+  agent:
+    build: .
+    container_name: aiproapply-agent
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - AGENT_PORT=3001
+      - DATABASE_URL=postgresql://aiproapply:aiproapply123@postgres:5432/aiproapply
+    command: node agent/index.js
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - aiproapply-network
+
+  # API Service
+  api:
+    build: .
+    container_name: aiproapply-api
+    ports:
+      - "3002:3002"
+    environment:
+      - NODE_ENV=production
+      - API_PORT=3002
+      - DATABASE_URL=postgresql://aiproapply:aiproapply123@postgres:5432/aiproapply
+    command: node api/index.js
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - aiproapply-network
+
+  # Notification Service
+  notifications:
+    build: .
+    container_name: aiproapply-notifications
+    ports:
+      - "3003:3003"
+    environment:
+      - NODE_ENV=production
+      - NOTIFICATION_PORT=3003
+      - DATABASE_URL=postgresql://aiproapply:aiproapply123@postgres:5432/aiproapply
+    command: node notification/index.js
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - aiproapply-network
+
+volumes:
+  postgres_data:
+
+networks:
+  aiproapply-network:
+    driver: bridge
