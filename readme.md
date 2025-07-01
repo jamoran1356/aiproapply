@@ -52,7 +52,7 @@ AIProApply follows a microservices architecture with the following components:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/aiproapply/aiproapply.git
+   git clone https://github.com/jamoran1356/aiproapply.git
    cd aiproapply
    ```
 
