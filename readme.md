@@ -17,7 +17,7 @@ AIProApply is an intelligent platform that automates freelance job searching, pr
 
 AIProApply follows a microservices architecture with the following components:
 
-\`\`\`
+```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   Next.js Web   │    │   Agent Service │    │   API Service   │
 │     (Port 3000) │    │   (Port 3001)   │    │   (Port 3002)   │
@@ -29,7 +29,7 @@ AIProApply follows a microservices architecture with the following components:
          │  Notification   │    │   PostgreSQL    │
          │   (Port 3003)   │    │   Database      │
          └─────────────────┘    └─────────────────┘
-\`\`\`
+```
 
 ### Services
 
@@ -51,39 +51,39 @@ AIProApply follows a microservices architecture with the following components:
 ### Quick Start
 
 1. **Clone the repository**
-   \`\`\`bash
+   ```bash
    git clone https://github.com/aiproapply/aiproapply.git
    cd aiproapply
-   \`\`\`
+   ```
 
 2. **Run the bootstrap script**
-   \`\`\`bash
+   ```bash
    chmod +x bootstrap.sh
    ./bootstrap.sh
-   \`\`\`
+   ```
 
 3. **Update environment variables**
-   \`\`\`bash
+   ```bash
    # Edit .env file with your actual values
    nano .env
-   \`\`\`
+   ```
 
 4. **Start the development server**
-   \`\`\`bash
+   ```bash
    npm run dev
-   \`\`\`
+   ```
 
 5. **Start all microservices**
-   \`\`\`bash
+   ```bash
    npm run start:services
-   \`\`\`
+   ```
 
 ### Docker Setup
 
 1. **Using Docker Compose**
-   \`\`\`bash
+   ```bash
    docker-compose up -d
-   \`\`\`
+   ```
 
 2. **Access the application**
    - Web: http://localhost:3000
@@ -95,7 +95,7 @@ AIProApply follows a microservices architecture with the following components:
 
 ### Environment Variables
 
-\`\`\`env
+```env
 # Database
 DATABASE_URL=postgresql://localhost:5432/aiproapply
 
@@ -111,7 +111,7 @@ SMTP_PASS=your_app_password
 # App URLs
 APP_URL=http://localhost:3000
 API_URL=http://localhost:3002
-\`\`\`
+```
 
 ### User Preferences
 
@@ -145,37 +145,37 @@ Users can configure:
 ## 📊 API Documentation
 
 ### Authentication
-\`\`\`bash
+```bash
 POST /api/auth/login
 POST /api/auth/register
-\`\`\`
+```
 
 ### User Management
-\`\`\`bash
+```bash
 GET /api/users/:userId/profile
 PUT /api/users/:userId/profile
 GET /api/users/:userId/preferences
 PUT /api/users/:userId/preferences
-\`\`\`
+```
 
 ### Proposals
-\`\`\`bash
+```bash
 GET /api/users/:userId/proposals
 POST /api/users/:userId/proposals
 PUT /api/proposals/:proposalId
-\`\`\`
+```
 
 ### Analytics
-\`\`\`bash
+```bash
 GET /api/users/:userId/analytics
 GET /api/users/:userId/applications
-\`\`\`
+```
 
 ## 🔧 Development
 
 ### Available Scripts
 
-\`\`\`bash
+```bash
 npm run dev              # Start development server
 npm run build            # Build for production
 npm run start            # Start production server
@@ -185,11 +185,11 @@ npm run logs             # View service logs
 npm run db:migrate       # Run database migrations
 npm run db:seed          # Seed database with sample data
 npm run test             # Run tests
-\`\`\`
+```
 
 ### Project Structure
 
-
+```
 aiproapply/
 ├── agent/                 # AI Agent services
 │   ├── index.js
@@ -211,28 +211,28 @@ aiproapply/
 │   └── service.js
 ├── hooks/                 # React hooks
 ├── lib/                   # Utilities and configurations
-└── public/               # Static assets
-
+└── public/                # Static assets
+```
 
 ## 🌐 Deployment
 
 ### Production Deployment
 
 1. **Build the application**
-   \`\`\`bash
+   ```bash
    npm run build
-   \`\`\`
+   ```
 
 2. **Start with PM2**
-   \`\`\`bash
+   ```bash
    npm run start:services
-   \`\`\`
+   ```
 
 3. **Monitor services**
-   \`\`\`bash
+   ```bash
    pm2 status
    pm2 logs
-   \`\`\`
+   ```
 
 ### Environment Setup
 
@@ -265,7 +265,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Built with [Next.js](https://nextjs.org/)
 - Powered by [OpenAI](https://openai.com/)
 - UI components from [shadcn/ui](https://ui.shadcn.com/)
-\`\`\`
+````
 
 ¡Perfecto! He adaptado completamente la arquitectura de SuperiorAgents al proyecto AIProApply. La nueva implementación incluye:
 
