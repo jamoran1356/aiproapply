@@ -189,7 +189,7 @@ npm run test             # Run tests
 
 ### Project Structure
 
-\`\`\`
+
 aiproapply/
 ├── agent/                 # AI Agent services
 │   ├── index.js
@@ -212,7 +212,7 @@ aiproapply/
 ├── hooks/                 # React hooks
 ├── lib/                   # Utilities and configurations
 └── public/               # Static assets
-\`\`\`
+
 
 ## 🌐 Deployment
 
