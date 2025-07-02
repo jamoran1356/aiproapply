@@ -136,7 +136,7 @@ export default function HomePage() {
                 {t("header.login")}
               </Button>
               <Button
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                className="bg-blue-700 text-white hover:from-blue-700 hover:to-purple-700"
                 onClick={() => (window.location.href = "/login")}
               >
                 {t("header.signUp")}
