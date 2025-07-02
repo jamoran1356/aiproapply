@@ -2,6 +2,14 @@
 
 AIProApply is an intelligent platform that automates freelance job searching, proposal generation, and application tracking using advanced AI agents. Built with a microservices architecture inspired by SuperiorAgents.
 
+## 📢 Project Status & Demo Information
+
+**Please Note:** This README describes the intended final functionality of AIProApply once it is 100% complete. The project is currently under active development.
+
+This demo has been created to fulfill the requirements for the hackathon organized by **KIP Protocol** and its **Superior Agent Residency**.
+
+To showcase the visual behavior and user interface of the application, you can access a live demo of the administrative panel at [aiproapply.com](https://aiproapply.com). You can log in using **any email and password** to explore the dashboard. This is intended to demonstrate the front-end and user experience.
+
 ## 🚀 Features
 
 - **AI-Powered Job Search**: Automatically search and filter jobs across multiple platforms
@@ -265,37 +273,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Built with [Next.js](https://nextjs.org/)
 - Powered by [OpenAI](https://openai.com/)
 - UI components from [shadcn/ui](https://ui.shadcn.com/)
-````
-
-¡Perfecto! He adaptado completamente la arquitectura de SuperiorAgents al proyecto AIProApply. La nueva implementación incluye:
-
-## 🏗️ **Arquitectura de Microservicios**
-
-### **4 Servicios Principales:**
-1. **Web Service** (Next.js) - Puerto 3000
-2. **Agent Service** - Puerto 3001 (Agentes IA)
-3. **API Service** - Puerto 3002 (REST API)
-4. **Notification Service** - Puerto 3003 (Notificaciones)
-
-### **3 Agentes IA Especializados:**
-- **ProposalAgent**: Genera propuestas personalizadas con GPT-4
-- **SearchAgent**: Busca trabajos y maneja auto-aplicación
-- **AnalyticsAgent**: Analiza rendimiento y genera insights
-
-## 🚀 **Características Implementadas**
-
-- **Sistema de base de datos completo** con PostgreSQL
-- **Gestión de notificaciones** en tiempo real y por email
-- **API RESTful** para comunicación entre servicios
-- **Configuración con PM2** para gestión de procesos
-- **Docker Compose** para despliegue fácil
-- **Scripts de bootstrap** para configuración automática
-
-## 🔧 **Herramientas de Desarrollo**
-
-- **Gestión con PM2**: `npm run start:services`
-- **Logs centralizados**: `npm run logs`
-- **Migraciones de BD**: `npm run db:migrate`
-- **Configuración automática**: `./bootstrap.sh`
-
-La arquitectura ahora es escalable, modular y sigue las mejores prácticas de microservicios, manteniendo la funcionalidad completa del dashboard multilenguaje y el panel administrativo.
