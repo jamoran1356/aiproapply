@@ -18,7 +18,7 @@ To showcase the visual behavior and user interface of the application, you can a
 - **Performance Analytics**: Track success rates, earnings, and optimization insights
 - **Multi-Platform Support**: Upwork, Fiverr, Freelancer, and more
 - **Real-time Notifications**: Get notified about new opportunities and responses
-- **Multilingual Support**: Available in Spanish, English, and Portuguese
+- **Multilingual Support**: Available in Spanish and English
 - **Admin Dashboard**: Comprehensive management interface for administrators
 
 ## 🏗️ Architecture
@@ -54,7 +54,7 @@ AIProApply follows a microservices architecture with the following components:
 - Node.js 18+
 - PostgreSQL 13+
 - npm or yarn
-- OpenAI API key
+- Superior Agent Configuration
 
 ### Quick Start
 
@@ -271,5 +271,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Inspired by [SuperiorAgents](https://github.com/SuperiorAgents/superior-agents)
 - Built with [Next.js](https://nextjs.org/)
-- Powered by [OpenAI](https://openai.com/)
+- Powered by Ing. Jesús Morán
 - UI components from [shadcn/ui](https://ui.shadcn.com/)
