@@ -13,7 +13,7 @@ To showcase the visual behavior and user interface of the application, you can a
 ## 🚀 Features
 
 - **AI-Powered Job Search**: Automatically search and filter jobs across multiple platforms
-- **Smart Proposal Generation**: Generate personalized proposals using GPT-4
+- **Smart Proposal Generation**: Generate personalized proposals using **Superior Agents**
 - **Auto-Apply System**: Automatically apply to relevant jobs based on your preferences
 - **Performance Analytics**: Track success rates, earnings, and optimization insights
 - **Multi-Platform Support**: Upwork, Fiverr, Freelancer, and more
