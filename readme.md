@@ -271,5 +271,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Inspired by [SuperiorAgents](https://github.com/SuperiorAgents/superior-agents)
 - Built with [Next.js](https://nextjs.org/)
-- Powered by Ing. Jesús Morán
+- Created by Ing. Jesús Morán
 - UI components from [shadcn/ui](https://ui.shadcn.com/)
